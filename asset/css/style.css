@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@600&family=Poppins:ital,wght@0,600&display=swap');
+
+:root {
+    --text-color : black;
+    --link-color : rgb(243, 189, 90);
+    --background-color :white;
+    --body-font: 'Poppins', sans-serif;
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    --big-font-size: 8rem;
+    --h1-font-size: 4.5rem;
+    --h2-font-size: 3.5rem;
+    --h3-font-size: 2.5rem;
+    --normal-font-size: 1.4rem;
+    --small-font-size: 1.2rem;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semi-bold: 600;
+    --font-weight-bold: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--body-font);
+}
+
+html, body {
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: auto; 
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+    color: var(--text-color);
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    font-size: var(--normal-font-size);
+    
+
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(255, 255, 255); /* Keeps the nav visible */
+    border: #000000;
+    border-bottom: 1px solid #000000;
+
+}
+
+.nav-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.logo {
+    font-size: var(--h3-font-size);
+    font-weight: bolder;
+    color: var(--text-color);
+    margin-top: 10px; 
+    margin-right: 25rem; 
+}
+
+.logo img {
+    width: 250px; 
+    height: auto;
+    display: block;
+    margin: 0 auto; 
+}
+
+.logo a {
+    color: rgb(243, 189, 90);
+    text-shadow: rgb(243, 189, 90) 0px 0px 5px;
+    text-decoration: none;
+    transition: 0.2s linear;
+}
+
+.logo a:hover {
+    scale: 1.1;
+    color: #f4f4f4;
+}
+
+.nav-container .nav-links {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.nav-container .nav-links a {
+    position: relative;
+    font-size: var(--small-font-size);
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: var(--font-weight-semi-bold);
+    font-family: 'Poppins', sans-serif;
+    transform: 0.3s linear;
+    transition: color 0.3s ease;
+}
+
+.nav-container .nav-links .link a {
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    font-weight: 700;
+}
+
+.nav-container .nav-links .link a::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: var(--text-color);
+    bottom: -5px;
+    left: 0;
+    transition: 0.2s linear;
+}
+
+.nav-container .nav-links a:hover::before {
+    width: 100%;
+}
+
+.nav-links .contact-button {
+    background-color: transparent;
+    padding: 1px 20px;
+    border-radius: 32px;
+    border: 2px solid var(--text-color);
+    transition: 0.2s linear;
+    font-family: noto kiufi arabic;
+}
+
+.nav-links .contact-button a {
+    color: var(--text-color);
+    transition: 0.2s linear;
+}
+
+.nav-links .contact-button:hover {
+    background-color: rgb(255, 207, 117);
+}
+
+section {
+    width: 100%;
+    height: 90vh;
+}
+
+.main-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 32px; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    font-family: 'Noto Kufi Arabic', sans-serif; 
+}
+
+.content h1 {
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+    color: var(--text-color)#ffb700;
+    
+}
+
+.content h1 span {
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    font-weight: 700;
+    color: rgb(117, 29, 19); /* Orange color */
+    text-shadow: 0px 0px 10px rgb(138, 24, 24); /* Glowing effect */
+}
+
+.content .typewriter  {
+    font-size: 2.5em;
+    font-weight: var(--font-weight-bold);
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.typewriter span::before {
+    content: "Developer";
+    animation: words 13s infinite;
+    color: rgb(243, 189, 90)
+}
+
+.typewriter span::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    border-width: 3px solid var(--link-color);
+    animation: cursor 0.0s linear infinite;
+}
+
+.content .btn button{
+    background-color: rgb(243, 189, 90);
+    margin-top: 25px;
+    padding: 10px 25px; 
+    font-size: var(--normal-font-size); /* Adjusted font size for better readability */
+    width: auto;
+    height: auto; 
+    border-radius: 20px;
+    transition: 0.2s linear;
+    font-weight: var(--font-weight-bold);
+    border: none;
+    outline: none;
+}
+
+.content .btn button:hover {
+    background-color: rgb(227, 152, 12);
+}
+
+.like-button button {
+    background-color: rgb(243, 189, 90);
+    margin-top: 15px;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    transition: 0.2s linear;
+    font-weight: var(--font-weight-bold);
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 5px 10px;
+}
+
+.like-button button:hover {
+    background-color: rgb(227, 152, 12);
+}
+
+footer {
+    background-color: #2c2c2c; /* Grey-black color */
+    color: #ffffff; /* White text */
+    text-align: center;
+    padding: 20px;
+    font-size: var(--normal-font-size);
+}
+
+footer a {
+    color: #f3bd5a; /* Link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffffff; /* Hover effect */
+}
+
+@keyframes cursor {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+
+}
+
+@keyframes words {
+    0% { content: "Developer";}
+    20% { content: "Designer";}
+    40% { content :"Programmer";}
+    60% { content: "Content Creator";}
+    80% {content: "Coder";}
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem; 
+    }
+
+    .nav-links a {
+        font-size: var(--normal-font-size); 
+    }
+
+    .main-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .content h1 {
+        font-size: var(--h1-font-size);
+        margin-bottom: 10px;
+    }
+
+    .content p {
+        font-size: var(--normal-font-size);
+        margin-bottom: 15px;
+    }
+
+    .content .btn button {
+        width: 150px;
+        height: 35px;
+        font-size: var(--small-font-size);
+    }
+
+    .main-container img {
+        width: 300px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links a {
+        font-size: var(--small-font-size); /* Further reduce font size for very small screens */
+    }
+
+    .logo img {
+        width: 200px; 
+    }
+
+    .content h1 {
+        font-size: var(--h2-font-size);
+    }
+
+    .content p {
+        font-size: var(--small-font-size);
+    }
+
+    .content .btn button {
+        width: 120px;
+        height: 30px;
+        font-size: var(--small-font-size);
+    }
+
+    .main-container img {
+        width: 250px;
+        height: auto;
+    }
+
+    
+}
+
+.main-container {
+  margin-bottom: 105px; 
+  
+}
+.banner {
+    margin-bottom: 20px;
+    font-size: var(--h4-font-size);
+    font-weight: var(--font-weight-bold);
+    color: #000000;
+    font-family:;}
+
+.new-section {
+    padding: 20px;
+    background-color: #0b56a2;
+    text-align: center;
+    border-radius: 32px;
+    color: #ffffff;
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    
+
+
+}
+
+.new-section h2 {
+    font-size: var(--h2-font-size);
+    color: var(--text-color);
+}
+
+.new-section p {
+    font-size: var(--normal-font-size);
+    color: var(--text-color);
+}
