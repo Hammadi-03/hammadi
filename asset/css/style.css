@@ -186,8 +186,8 @@ section {
 .content h1 span {
     font-family: 'Noto Kufi Arabic', sans-serif;
     font-weight: 700;
-    color: rgb(117, 29, 19); /* Orange color */
-    text-shadow: 0px 0px 10px rgb(138, 24, 24); /* Glowing effect */
+    color: rgb(117, 29, 19); /
+    text-shadow: 0px 0px 10px rgb(138, 24, 24); /
 }
 
 .content .typewriter  {
@@ -216,7 +216,7 @@ section {
     background-color: rgb(243, 189, 90);
     margin-top: 25px;
     padding: 10px 25px; 
-    font-size: var(--normal-font-size); /* Adjusted font size for better readability */
+    font-size: var(--normal-font-size); 
     width: auto;
     height: auto; 
     border-radius: 20px;
@@ -249,15 +249,15 @@ section {
 }
 
 footer {
-    background-color: #2c2c2c; /* Grey-black color */
-    color: #ffffff; /* White text */
+    background-color: #2c2c2c; 
+    color: #ffffff; 
     text-align: center;
     padding: 20px;
     font-size: var(--normal-font-size);
 }
 
 footer a {
-    color: #f3bd5a; /* Link color */
+    color: #f3bd5a; 
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -337,7 +337,7 @@ footer a:hover {
 
 @media (max-width: 480px) {
     .nav-links a {
-        font-size: var(--small-font-size); /* Further reduce font size for very small screens */
+        font-size: var(--small-font-size); 
     }
 
     .logo img {
