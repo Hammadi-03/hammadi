@@ -26,15 +26,15 @@
 }
 
 html, body {
-    overflow-x: hidden; /* Prevents horizontal scrolling */
-    margin: 0;
+    overflow-x: hidden; 
+    margin: -50;
     padding: 0;
 }
 
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
-    height: 100%;
+    height: 90%;
 }
 
 body {
@@ -392,9 +392,15 @@ footer a:hover {
 .new-section h2 {
     font-size: var(--h2-font-size);
     color: var(--text-color);
+    color: #ffffff
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    font-weight: 700;
+
 }
 
 .new-section p {
     font-size: var(--normal-font-size);
     color: var(--text-color);
+    color: #ffffff;
+    
 }
