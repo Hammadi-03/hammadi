@@ -7,7 +7,7 @@
     --body-font: 'Poppins', sans-serif;
     font-family: 'Noto Kufi Arabic', sans-serif;
     --big-font-size: 8rem;
-    --h1-font-size: 4.5rem;
+    --h1-font-size: 3.5rem;
     --h2-font-size: 3.5rem;
     --h3-font-size: 2.5rem;
     --normal-font-size: 1.4rem;
@@ -27,8 +27,7 @@
 
 html, body {
     overflow-x: hidden; 
-    margin: -50;
-    padding: 0;
+    overflow-y: auto; /* Ensure vertical scrolling */
 }
 
 html {
@@ -39,17 +38,13 @@ html {
 
 body {
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    overflow-y: auto; 
+    height: 300vh;
     margin: 0;
     padding: 0;
     background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
     color: var(--text-color);
     font-family: 'Noto Kufi Arabic', sans-serif;
     font-size: var(--normal-font-size);
-    
-
 }
 
 nav {
@@ -58,7 +53,7 @@ nav {
     z-index: 1000;
     width: 100%;
     height: 10vh;
-    background-color: rgb(255, 255, 255); /* Keeps the nav visible */
+    background-color: rgb(255, 255, 255); 
     border: #000000;
     border-bottom: 1px solid #000000;
 
@@ -81,18 +76,11 @@ nav {
     margin-right: 25rem; 
 }
 
-.logo img {
-    width: 250px; 
-    height: auto;
-    display: block;
+.logo .img {
+    width: 100px; 
+    height: 50px;
+    display: flex;
     margin: 0 auto; 
-}
-
-.logo a {
-    color: rgb(243, 189, 90);
-    text-shadow: rgb(243, 189, 90) 0px 0px 5px;
-    text-decoration: none;
-    transition: 0.2s linear;
 }
 
 .logo a:hover {
@@ -138,63 +126,83 @@ nav {
 }
 
 .nav-links .contact-button {
-    background-color: transparent;
-    padding: 1px 20px;
-    border-radius: 32px;
+    background-color: #FFD700;
+    padding: 1px 10px;
+    border-radius: 10px;
     border: 2px solid var(--text-color);
     transition: 0.2s linear;
     font-family: noto kiufi arabic;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 .nav-links .contact-button a {
     color: var(--text-color);
     transition: 0.2s linear;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 .nav-links .contact-button:hover {
-    background-color: rgb(255, 207, 117);
+    background-color: #1e1e1e;
+    color: #ffffff;
 }
 
-section {
-    width: 100%;
-    height: 90vh;
-}
 
 .main-container {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
     padding: 20px;
     background: #ffffff;
-    border-radius: 32px; 
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
     font-family: 'Noto Kufi Arabic', sans-serif; 
-}
+}   
 
 .content h1 {
-    font-size: var(--h2-font-size);
+    font-size: var(--h1-font-size); /* Ensure heading is prominent */
+    font-weight: var(--font-weight-bold);
+    text-align: center; 
+    margin-bottom: 20px; 
+    color: var(--text-color);
+    display: flex;
+    justify-content:left;
+    align-items: flex-end;
+}
+
+.content .my {
+    font-size: var(--h1-font-size);
     font-weight: var(--font-weight-bold);
     margin-bottom: 20px;
     animation: fadeIn 1s ease-in-out;
-    color: var(--text-color)#ffb700;
-    
+    color: var(--text-color);
+    text-decoration: dashed underline;
+    display: flex;
+    justify-content:left;
+    align-items: flex-end;
+
 }
 
 .content h1 span {
     font-family: 'Noto Kufi Arabic', sans-serif;
     font-weight: 700;
-    color: rgb(117, 29, 19);
-    text-shadow: 0px 0px 10px rgb(138, 24, 24);
+    color: rgb(117, 29, 19); /* Ensure Arabic text is styled correctly */
+    text-shadow: 0px 0px 10px rgb(138, 24, 24); /* Add subtle shadow for emphasis */
 }
 
 .content .typewriter  {
-    font-size: 2.5em;
-    font-weight: var(--font-weight-bold);
-    color: var(--text-color);
+    font-size: var(--h2-font-size); 
+    text-align: center; 
+    color: rgb(243, 189, 90);
     margin-bottom: 20px;
+    display: flex;
+    justify-content:left;
+    align-items: flex-end;
 }
 
 .typewriter span::before {
@@ -215,28 +223,30 @@ section {
 .content .btn {
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    justify-content: center; 
+    align-items: flex-start; 
+    justify-content: left; 
     margin-top: 20px;
 }
 
 .content .btn button{
-    background-color: rgb(243, 189, 90);
+    background-color: #FFD700;
     margin-top: 25px;
     padding: 10px 25px; 
     font-size: var(--normal-font-size); 
     width: auto;
     height: auto; 
-    border-radius: 20px;
+    border-radius: 5px;
     transition: 0.2s linear;
     font-weight: var(--font-weight-bold);
-    border: none;
+    border: 1;
     outline: none;
     text-align: center;
 }
 
 .content .btn button:hover {
-    background-color: rgb(227, 152, 12);
+    background-color: rgb(22, 22, 22);
+    color: #ffffff;
+    
 }
 
 .like-button button {
@@ -266,14 +276,194 @@ footer {
 }
 
 footer a {
-    color: #f3bd5a; 
-    text-decoration: none;
+    color: #000000; 
     transition: color 0.3s ease;
 }
 
 footer a:hover {
     color: #ffffff; /* Hover effect */
 }
+
+
+.banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color:#FFD700;
+    height: 15vh;
+    margin-bottom: 20px;
+    font-size: var(--h4-font-size);
+    font-weight: var(--font-weight-bold);
+    color: #000000;
+    border: 1.3px solid #000000;
+
+}
+
+.banner .content1 {
+    display: flex;
+    flex-direction: column;
+    color: #000000;
+}
+
+.new-section {
+    height: 100vh;
+    padding: 90px; 
+    background-color: #0b56a2;
+    text-align: center;
+    border-radius: 32px;
+    color: #ffffff;
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    margin: 50px auto; 
+    max-width: 99%; 
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.new-section .english-text {
+    font-size: var(--h3-font-size); 
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    font-weight: 700;
+    margin-bottom: 5px; 
+    margin-top: -3%;
+    padding-left: -0px;
+    align-items: flex-start;    
+    display: flex;
+    flex-direction: column;
+}
+
+.new-section .arabic-text {
+    font-size: var(--h3-font-size);
+    font-family:'Noto Kufi Arabic', sans-serif;
+    font-weight: 400;
+    margin-top: -3%;
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    padding-left: -3px;
+}
+
+.new-section p {
+    font-size: var(--normal-font-size);
+    color: #ffffff;
+    line-height: 1.6; 
+    margin-bottom: 20px;
+}
+
+/*================== Skills Section ===================*/
+
+.skills-section {
+    padding: 8rem 2rem; /* Adjusted padding for better spacing */
+}
+
+.cards {
+    width: 90%; /* Increased width for better alignment */
+    display: flex;
+    justify-content: center; /* Center align cards */
+    align-items: center;
+    gap: 1.5rem; /* Reduced gap for compact layout */
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 100px 0; /* Adjusted padding for better spacing */
+    color:#000000
+}
+
+.card {
+    background-color: #ffffff; /* Changed to white for better contrast */
+    color: #060606;
+    width: 300px; /* Increased width */
+    height: 350px; /* Increased height */
+    border-radius: 15px; /* Increased border radius for smoother edges */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Enhanced hover effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Added shadow on hover */
+}
+
+.skills-section .cards .text {
+    text-align: center;
+    font-size: var(--normal-font-size); /* Improved text size */
+    font-weight: var(--font-weight-medium); /* Adjusted font weight */
+    color: var(--text-color); /* Ensured consistent text color */
+    margin-top: 10px; /* Added spacing above text */
+    
+}
+
+.heading1 {
+    font-size: var(--h2-font-size);
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-left: 5%;
+}
+
+.testi-section {
+    padding-top:7rem;
+    margin-bottom: 5rem;
+    background-color: #0375e7;
+    border-radius: 32px;
+    color: #ffffff;
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    
+}
+.testimoni-container {
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 20px 0px;
+}
+.testimoni-container2 {
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 2px 0px;
+}
+.testimoni-card {
+    background: var(--white-color);
+    width: 250px;
+    height: 170px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px #0000001a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+    padding: 20px;
+    transition: 0.3s linear;
+}
+.testimoni-card img {
+    width: 40px;
+}
+.star {
+    color: gold;
+    font-size: 1.2rem;
+}  
+.testimoni-card:hover {
+    transform: translateY(-10px);
+}
+
+
 
 @keyframes cursor {
     0% {opacity: 1;}
@@ -328,36 +518,4 @@ footer a:hover {
         margin: 0px;
     }
   
-}
-.banner {
-    margin-bottom: 20px;
-    font-size: var(--h4-font-size);
-    font-weight: var(--font-weight-bold);
-    color: #000000;
-    font-family:}
-
-.new-section {
-    padding: 90px; 
-    background-color: #0b56a2;
-    text-align: center;
-    border-radius: 10px;
-    color: #ffffff;
-    font-family: 'Noto Kufi Arabic', sans-serif;
-    margin: 50px auto; /* Center the section horizontally */
-    max-width: 80%; /* Limit the width for better readability */
-}
-
-.new-section h1 {
-    font-size: var(--h1-font-size); /* Adjusted font size for heading */
-    color: #ffffff;
-    font-family: 'Noto Kufi Arabic', sans-serif;
-    font-weight: 700;
-    margin-bottom: 20px; /* Added spacing below heading */
-}
-
-.new-section p {
-    font-size: var(--normal-font-size);
-    color: #ffffff;
-    line-height: 1.6; /* Improved readability */
-    margin-bottom: 20px; /* Added spacing below paragraph */
 }
