@@ -276,15 +276,12 @@ footer {
     background-color: #121212; 
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
-    color:#ff0000
-    justify-content: center;
-    align-items: :left;
+    color:#ff0000;
+    justify-content: center; /* Added missing semicolon */
+    align-items: left; /* Fixed incorrect syntax */
     display: flex;
     flex-direction: row;
-    
-    
 }
-
 
 .banner {
     display: flex;
@@ -355,7 +352,7 @@ footer {
 /*================== Skills Section ===================*/
 
 .skills-section {
-    padding: 8rem 2rem; /* Adjusted padding for better spacing */
+    padding: 8rem 2rem; 
 }
 
 .cards {
@@ -367,7 +364,7 @@ footer {
     flex-wrap: wrap;
     margin: auto;
     padding: 100px 0; /* Adjusted padding for better spacing */
-    color:#000000
+    color:#000000;
 }
 
 .card {
