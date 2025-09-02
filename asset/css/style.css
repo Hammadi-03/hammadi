@@ -33,7 +33,7 @@ html, body {
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
-    height: 90%;
+    height: 90vw;
 }
 
 body {
