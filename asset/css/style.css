@@ -160,7 +160,7 @@ nav {
     align-items: center;
     flex-direction: row;
     padding: 20px;
-    background: #ffffff;
+    background: #f0f0cc;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
     font-family: 'Noto Kufi Arabic', sans-serif; 
 }   
@@ -192,7 +192,7 @@ nav {
 .content h1 span {
     font-family: 'Noto Kufi Arabic', sans-serif;
     font-weight: 700;
-    color: rgb(117, 29, 19); /* Ensure Arabic text is styled correctly */
+    color: rgb(117, 29, 19); 
     text-shadow: 0px 0px 10px rgb(138, 24, 24); /* Add subtle shadow for emphasis */
 }
 
