@@ -12,7 +12,7 @@
     <nav>
         <div class="nav-container">
         <div class="logo" data aos="fade-right" data aos="duration=1000">
-            <img src="asset/src/img/Logo mee.png" alt="aziz logo" style="width: 35%;" style="padding-bottom: 10%;"  >
+             <a href="#">𝙰𝚋𝚞𝚕𝚊𝚣𝚒𝚣</a>
         </div>
         <div class="nav-links">
             <div class="link" data aos="fade-up" data aos="duration=1000" data aos="delay=100"><a href="#section1">Home</a></div>
@@ -43,7 +43,7 @@
 
         <div class="content">
 
-            <h1>𝐻𝑜𝓌𝒹𝓎 I'm <span>عبدالعزيز</span></h1> 
+            <h1>Howdy! I'm <span>عبدالعزيز</span></h1> 
             <p class="typewriter">I'm a <span></span></p>
             <div class="my-story" id="section2"><h1 class="my">My Story</h1></div>
         <p>I’m Abdulaziz Hammadi, a student with a strong passion for technology, AI, and programming. Alongside coding, I have a keen eye for design and style,
@@ -57,7 +57,8 @@
                  " target="_blank"><i class="fa-brands fa-youtube fa-xl" style="color: #ff0000;"></i></a>
                  
             <div class="btn">
-            <button>Download CV</button>
+             <a href="asset/src/Resume  aziz.pdf" download="asset/src/Resume  aziz.pdf" target="_blank"><button>Download CV</button></a>
+
                  
         </div>
             </div>
@@ -111,45 +112,83 @@
         <div class="testimoni-container">
             <div class="testimoni-card">
                 <img src="assets/src/img/user.svg" alt="">
-                <h3>Budi</h3>
+                <h3>Omar Ali</h3>
                 <p class="star">★★★★★</p>
                 <p class="text">Aplikasinya powerful, harganya worth it!</p>
             </div>
             <div class="testimoni-card">
                 <img src="assets/src/img/user.svg" alt="">
-                <h3>Asep</h3>
-                <p class="star">★★★★★</p>
+                <h3>Joseph J.</h3>
+                <p class="star">★★★★</p>
                 <p class="text">Debugging dan maintenance-nya cepat banget. Solusi!</p>
             </div>
-            <div class="testimoni-card">
-                <img src="assets/src/img/user.svg" alt="">
-                <h3>Joko</h3>
-                <p class="star">★★★★★</p>
-                <p class="text">Tim responsif, project on time. Recommended!</p>
-            </div>
-        </div> 
-        <div class="testimoni-container2">
-            <div class="testimoni-card">
-                <img src="assets/src/img/user.svg" alt="">
-                <h3>Siti</h3>
-                <p class="star">★★★★★</p>
-                <p class="text">Kinerjanya sangat bagus, keren deh pokoknya !</p>
-            </div>
-            <div class="testimoni-card">
-                <img src="assets/src/img/user.svg" alt="">
-                <h3>Wati</h3>
-                <p class="star">★★★★★</p>
-                <p class="text">Amanah banget deh, kapan-kapan kesini lagi deh !</p>
-            </div>
-            <div class="testimoni-card">
-                <img src="assets/src/img/user.svg" alt="">
-                <h3>Tuti</h3>
-                <p class="star">★★★★★</p>
-                <p class="text">Sangat Mantap, Pokoknya kalo butuh tinggal kesini !</p>
+                <div class="testimoni-card">
+                    <img src="" alt="">
+                    <h3>Mr. watt</h3>
+                    <p class="star">★★★★★</p>
+                    <p class="text">wow nice work and the Design is so Asthenic and nice Great work keep up!.</p>
+                </div>
             </div>
         </div> 
     </section>     
         </div>
     </section>
+    <div class="banner2">
+        <div class="content2">
+            <p>#Certificates↓↓  </p>
+        </div>
+        <div class="content2">
+            <p>#Certificates↓↓ </p>
+        </div>
+        <div class="content2">
+            <p>#Certificates↓↓ </p>
+        </div>
+        <div class="content2">
+            <p>#Certificates↓↓ </p>
+        </div>
+    </div>
+    <section id="section4" class="certificate-section">
+        <div class="certificate-container">
+                <p><h1>Coming Soon</h1></p>
+            </div>
+            <div class="certificate-container2">
+                <p><h1>Coming Soon</h1></p>
+            </div>
+        </div>
+    </section>
+    <footer>
+         <p>© 2025 Abdulaziz Hammadi. All rights reserved.</p>
+    </footer>
 </body>
+<script>
+    function hamburger(){
+        const navbar = document.querySelector(".dropdown")
+        navbar.style.transform = "translateY(0px)"
+    }
+    function cancel(){
+        const navbar = document.querySelector(".dropdown")
+        navbar.style.transform = "translateY(-500px)"
+    }
+
+     const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("nav a");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        if (scrollY >= sectionTop) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+          link.classList.add("active");
+        }
+      });
+    });
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </html>
