@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@600&family=Poppins:ital,wght@0,600&display=swap');
 
 :root {
-    --text-color : black;
+    --text-color : rgb(0, 0, 0);
     --link-color : rgb(243, 189, 90);
     --background-color :white;
     --body-font: 'Poppins', sans-serif;
