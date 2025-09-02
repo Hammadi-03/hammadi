@@ -25,9 +25,10 @@
     font-family: var(--body-font);
 }
 
-html, body {
-    overflow-x: hidden; 
-    overflow-y: auto; /* Ensure vertical scrolling */
+html, body { 
+    
+    overflow-y: visible; 
+
 }
 
 html {
@@ -159,6 +160,7 @@ nav {
 
 
 .main-container {
+    overflow-y: hidden;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -533,11 +535,11 @@ footer {
 }
 
 @keyframes words {
-    0% { content: "Developer";}
-    20% { content: "Design passionate";}
-    40% { content :"Programmer";}
-    60% { content: "Content Creator";}
-    80% {content: "smart boy";}
+    10% { content: "a Developer ";}
+    20% { content: " Design passionate ";}
+    40% { content :" Programmer ";}
+    60% { content: " Content Creator ";}
+    80% {content: " smart boy ";}
 }
 
 @keyframes fadeIn {
