@@ -161,34 +161,14 @@
     </footer>
 </body>
 <script>
-    function hamburger(){
-        const navbar = document.querySelector(".dropdown")
-        navbar.style.transform = "translateY(0px)"
+    function hamburger() {
+        const navbar = document.querySelector('.dropdown')
+        navbar.style.transform = "translateX(0px)"
     }
     function cancel(){
-        const navbar = document.querySelector(".dropdown")
-        navbar.style.transform = "translateY(-500px)"
+        const navbar = document.querySelector('.dropdown')
+        navbar.style.transform = "translateX(-500px)"
     }
-
-     const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll("nav a");
-
-    window.addEventListener("scroll", () => {
-      let current = "";
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        if (scrollY >= sectionTop) {
-          current = section.getAttribute("id");
-        }
-      });
-
-      navLinks.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === "#" + current) {
-          link.classList.add("active");
-        }
-      });
-    });
 </script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </html>

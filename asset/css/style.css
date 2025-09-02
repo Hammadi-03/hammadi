@@ -55,7 +55,7 @@ nav {
     height: 10vh;
     background-color: rgb(255, 255, 255); 
     border: #000000;
-    border-bottom: 1px solid #000000;
+    border-bottom: 3px solid #000000;
 
 }
 
@@ -531,10 +531,10 @@ footer {
 
 @keyframes words {
     0% { content: "Developer";}
-    20% { content: "Designer";}
+    20% { content: "Design passionate";}
     40% { content :"Programmer";}
     60% { content: "Content Creator";}
-    80% {content: "Coder";}
+    80% {content: "smart boy";}
 }
 
 @keyframes fadeIn {
