@@ -311,6 +311,8 @@ footer {
     flex-direction: column;
     color: #000000;
     font-size: var(--h1-font-size);
+    
+    animation: scroll 10s linear infinite;
 
 }
 
@@ -498,6 +500,7 @@ footer {
     color: #000000;
     font-family: 'Noto Kufi Arabic', sans-serif;
     font-size: var(--h1-font-size);
+    animation: scroll 10s linear infinite;
 }
 .certificate-section {
     padding: 2rem 1rem; /* Reduce padding to make the white space smaller */
@@ -829,3 +832,16 @@ html {
     display: block;
   }
 }
+
+@keyframes scroll {
+    to {
+        transform: translatex(-100%);
+    }
+
+
+}
+
+@keyframes scroll {
+    to {
+        transform: translatex(-100%);
+    }
