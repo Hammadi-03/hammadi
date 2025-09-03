@@ -500,7 +500,7 @@ footer {
     color: #000000;
     font-family: 'Noto Kufi Arabic', sans-serif;
     font-size: var(--h1-font-size);
-    animation: scroll 10s linear infinite;
+    animation: scroll 5s linear infinite;
 }
 .certificate-section {
     padding: 2rem 1rem; /* Reduce padding to make the white space smaller */
@@ -845,3 +845,4 @@ html {
     to {
         transform: translatex(-100%);
     }
+}
