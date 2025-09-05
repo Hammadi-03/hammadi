@@ -304,6 +304,7 @@ footer {
     color: #000000;
     border: 1.3px solid #000000;
 
+
 }
 
 .banner .content1 {
@@ -311,6 +312,9 @@ footer {
     flex-direction: column;
     color: #000000;
     font-size: var(--h1-font-size);
+
+    animation: scroll 10s  linear infinite;
+    
 
 }
 
@@ -498,6 +502,8 @@ footer {
     color: #000000;
     font-family: 'Noto Kufi Arabic', sans-serif;
     font-size: var(--h1-font-size);
+   animation: scroll 10s  linear infinite;
+
 }
 .certificate-section {
     padding: 2rem 1rem; /* Reduce padding to make the white space smaller */
@@ -526,6 +532,14 @@ footer {
 .certificate-card img {
     width: 100%;
     border-radius: 5px;
+}
+
+@keyframes scroll {
+    to {
+        transform: translateX(-100%);
+    }
+    
+    
 }
 
 @keyframes cursor {
