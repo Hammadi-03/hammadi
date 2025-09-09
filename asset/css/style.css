@@ -691,6 +691,7 @@ html {
     text-align: center;
     padding: 40px 20px;
     height: auto;
+    overflow-x: hidden;
   }
 
   .content {
@@ -787,6 +788,7 @@ html {
   footer {
     font-size: 0.8rem;
     text-align: center;
+
   }
 }
 
@@ -859,6 +861,9 @@ html {
         overflow: visible;
         overflow-x: hidden;
     }
+    html {
+      overflow-x: hidden;
+    }
     .logo{
         position: absolute;
         top: 16px;
@@ -908,6 +913,8 @@ html {
     }
     footer{ 
         display: block;
+        justify-content: center;
+        display: flex;
     }
     .new-section {
       height: auto;
