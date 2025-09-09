@@ -247,12 +247,17 @@ nav {
     font-size: var(--normal-font-size); 
     width: auto;
     height: auto; 
-    border-radius: 5px;
+    border-radius: 8px;
     transition: 0.2s linear;
     font-weight: var(--font-weight-bold);
     border: 1;
     outline: none;
     text-align: center;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+
 }
 
 .content .btn button:hover {
