@@ -176,7 +176,7 @@ nav {
 }   
 
 .content h1 {
-    font-size: var(--h1-font-size); /* Ensure heading is prominent */
+    font-size: var(--h1-font-size); 
     font-weight: var(--font-weight-bold);
     text-align: center; 
     margin-bottom: 20px; 
@@ -452,7 +452,13 @@ footer {
     flex-wrap: wrap;
     margin: auto;
     padding: 20px 0px;
-    margin-top: 20px; /* Lower the testimonial boxes slightly */
+    margin-top: 20px;
+    font-family:'Noto Kufi Arabic', sans-serif; 
+
+}
+
+.text9 {
+    font-family: 'Noto Kufi Arabic', sans-serif;
 }
 .testimoni-container2 {
     width: 80%;
@@ -467,7 +473,7 @@ footer {
 }
 .testimoni-card {
     background: #f7f7f7;
-    width: 250px;
+    width: 500px;
     height: 195%;
     border-radius: 20px;
     box-shadow: 0 4px 10px #0000001a;
@@ -478,6 +484,7 @@ footer {
     margin: 20px 0px;
     padding: 20px;
     transition: 0.3s linear;
+    font-family:'Noto Kufi Arabic', sans-serif; 
 }
 .testimoni-card img {
     width: 40px;
