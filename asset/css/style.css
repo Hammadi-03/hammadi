@@ -664,7 +664,6 @@ footer{
     margin-top: auto;
 }
 
-/* ✅ Global responsive scaling */
 html {
   font-size: 100%;
 }
@@ -791,13 +790,12 @@ html {
   }
 }
 
-/* Mobile dropdown menu */
 .dropdown {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: white;
+  background: rgb(63, 78, 189);
   transform: translateY(-100%);
   transition: transform 0.3s ease-in-out;
   z-index: 999;
@@ -921,6 +919,7 @@ html {
     }
     .banner2 {
       height:5rem;
+      width: auto;
       display: flex;
       flex-direction: row;
     }
