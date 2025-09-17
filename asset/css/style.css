@@ -408,16 +408,16 @@ footer {
 }
 
 .card:hover {
-    transform: translateY(-10px); /* Enhanced hover effect */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Added shadow on hover */
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); 
 }
 
 .skills-section .cards .text {
     text-align: center;
-    font-size: var(--normal-font-size); /* Improved text size */
-    font-weight: var(--font-weight-medium); /* Adjusted font weight */
-    color: var(--text-color); /* Ensured consistent text color */
-    margin-top: 10px; /* Added spacing above text */
+    font-size: var(--normal-font-size); 
+    font-weight: var(--font-weight-medium); 
+    color: var(--text-color); 
+    margin-top: 10px; 
     
 }
 
@@ -524,10 +524,10 @@ footer {
 
 }
 .certificate-section {
-    padding: 2rem 1rem; /* Reduce padding to make the white space smaller */
+    padding: 2rem 1rem; 
     background-color: #f8f9fa;
     text-align: center;
-    min-height: 80vh; /* Adjust height to reduce white space */
+    min-height: 80vh; 
 }
 
 .certificate-container {
