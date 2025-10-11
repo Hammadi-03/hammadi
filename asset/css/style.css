@@ -160,6 +160,7 @@ nav {
     transition: transform 0.3s ease-in-out;
     z-index: 1001;
     display: flex;
+    font-family: 'Poppins', sans-serif;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -320,6 +321,7 @@ nav {
     background-color: var(--primary-color);
     padding: 12px 25px;
     font-size: var(--normal-font-size);
+    font-family: 'Poppins', sans-serif;
     border-radius: 8px;
     transition: all 0.3s ease;
     font-weight: var(--font-weight-bold);
@@ -345,6 +347,9 @@ nav {
     border: 1.3px solid #000000;
     overflow: hidden;
     position: relative;
+    font-family: 'Poppins', sans-serif;
+
+    ;
 }
 
 .scroller {
