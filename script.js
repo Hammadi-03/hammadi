@@ -29,3 +29,31 @@ links.forEach(link => {
   link.addEventListener('mouseover', () => cursor.classList.add('hover'));
   link.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
 });
+
+// Hamburger / dropdown menu toggle
+const hamburger = document.querySelector('.hamburger');
+const dropdown = document.querySelector('.dropdown');
+const cancelBtn = document.querySelector('.cancel');
+
+if (hamburger && dropdown) {
+  hamburger.addEventListener('click', () => {
+    dropdown.classList.toggle('active');
+    // change hamburger icon to x
+    const icon = hamburger.querySelector('i');
+    if (icon) {
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-xmark');
+    }
+  });
+}
+
+if (cancelBtn && dropdown) {
+  cancelBtn.addEventListener('click', () => {
+    dropdown.classList.remove('active');
+    const icon = hamburger && hamburger.querySelector('i');
+    if (icon) {
+      icon.classList.remove('fa-xmark');
+      icon.classList.add('fa-bars');
+    }
+  });
+}
