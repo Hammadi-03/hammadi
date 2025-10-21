@@ -17,12 +17,62 @@
     --font-weight-bold: 700;
     --primary-color: #FFD700;
     --primary-color-dark: #e6c200;
+
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+* {
+  cursor: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+a:hover:after{
+  width: 100%;
+  left: 0%;
+  background: rgb(255, 253, 253);
+}
+
+.cursor {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 1px solid rgb(0, 0, 0);
+  transition: all 200ms ease-out;
+  position: fixed;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  transform: translate(calc(-50% + 15px), -50%);
+  z-index: 1002;
+  will-change: transform;
+}
+
+.cursor2 {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: black;
+  opacity: .3;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: width .3s, height .3s, opacity .3s;
+  z-index: 1002;
+  will-change: transform;
+}
+
+.cursorinnerhover {
+  width: 50px;
+  height: 50px;
+  opacity: .5;
 }
 
 html {
@@ -54,7 +104,6 @@ nav {
     background-color: var(--background-color);
     border-bottom: 3px solid #000000;
     font-family: "Noto Kufi Arabic", sans-serif;
-
 }
 
 .nav-container {
@@ -208,8 +257,12 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 5% 5%;
+    border-bottom-left-radius:35px ;
+    border-bottom-right-radius: 35px;
     background: #f0f0cc;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom, #ffffff, #d7ca76);
+
 }
 
 .main-container .image {
@@ -348,8 +401,6 @@ nav {
     overflow: hidden;
     position: relative;
     font-family: 'Poppins', sans-serif;
-
-    ;
 }
 
 .scroller {
@@ -380,7 +431,7 @@ nav {
     padding: 90px 5%;
     background-color: #0b56a2;
     text-align: center;
-    border-radius: 32px;
+    border-radius: 100px;
     color: #ffffff;
     margin: 50px 0;
 }
@@ -619,8 +670,6 @@ footer {
 }
 
 /* Responsive Design */
-
-/* Tablet Size (768px - 1024px) */
 @media (max-width: 1024px) {
     :root {
         --h1-font-size: 2.8rem;
@@ -629,21 +678,26 @@ footer {
         --normal-font-size: 1.2rem;
         --small-font-size: 1rem;
     }
-    
+
+    .banner, .banner2 {
+        height: 9vh;
+        min-height: -55px;
+    }
+
     .nav-container {
         padding: 0 3%;
     }
-    
+
     .nav-container .nav-links {
-        gap: 1.5rem;
+        gap: 1.0rem;
     }
-    
+
     .main-container {
         padding: 5% 3%;
     }
-    
+
     .content1 p, .content2 p {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -656,58 +710,58 @@ footer {
         --normal-font-size: 1rem;
         --small-font-size: 0.9rem;
     }
-    
+
     .nav-container .nav-links {
         display: none;
     }
-    
+
     .hamburger {
         display: block;
     }
-    
+
     .main-container {
         flex-direction: column;
         text-align: center;
         padding: 10% 5%;
     }
-    
+
     .content {
         padding: 0;
         margin-top: 30px;
     }
-    
+
     .content h1, .content .my {
         text-align: center;
     }
-    
+
     .link-socia-media {
         justify-content: center;
     }
-    
+
     .content .btn {
         display: flex;
         justify-content: center;
     }
-    
+
     .banner, .banner2 {
-        height: 12vh;
-        min-height: 70px;
+        height: 2vh;
+        min-height: 55px;
     }
-    
+
     .content1 p, .content2 p {
         font-size: 1.8rem;
     }
-    
+
     .new-section {
         padding: 60px 5%;
         border-radius: 20px;
     }
-    
+
     .testi-section {
         padding: 5rem 5%;
         border-radius: 20px;
     }
-    
+
     .certificate-container {
         flex-direction: column;
         gap: 2rem;
@@ -723,50 +777,50 @@ footer {
         --normal-font-size: 0.9rem;
         --small-font-size: 0.8rem;
     }
-    
+
     .nav-container {
         padding: 0 15px;
     }
-    
+
     .logo {
         font-size: 1.5rem;
     }
-    
+
     .main-container {
         padding: 15% 15px;
     }
-    
+
     .main-container .image img {
         max-width: 280px;
     }
-    
+
     .banner, .banner2 {
-        height: 10vh;
-        min-height: 60px;
+        height: -9vh;
+        min-height: -69px;
     }
-    
+
     .content1 p, .content2 p {
         font-size: 1.5rem;
     }
-    
+
     .cards, .testimoni-container {
         gap: 1.5rem;
     }
-    
+
     .card, .testimoni-card {
         max-width: 300px;
         min-height: 320px;
         padding: 20px 15px;
     }
-    
+
     .card h2 {
         font-size: 1.5rem;
     }
-    
+
     .testimoni-card {
         min-height: 400px;
     }
-    
+
     footer {
         padding: 15px;
         font-size: 0.8rem;
@@ -780,12 +834,102 @@ footer {
         --h2-font-size: 1.3rem;
         --h3-font-size: 1.1rem;
     }
-    
+
+     .banner, .banner2 {
+        height: 5vh;
+        min-height: 50px;
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
+     }
+
     .content1 p, .content2 p {
         font-size: 1.3rem;
     }
-    
+
     .card, .testimoni-card {
         max-width: 280px;
     }
+
 }
+
+    /* CV Download button (scoped) */
+    .cv-download {
+        all: unset;
+        cursor: pointer;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        position: relative;
+        border-radius: 999vw;
+        background-color: rgba(0,0,0,0.75);
+        box-shadow: -0.15em -0.15em 0.15em -0.075em rgba(5,5,5,0.25), 0.0375em 0.0375em 0.0675em 0 rgba(5,5,5,0.1);
+        display: inline-block;
+    }
+
+    .cv-download::after {
+        content: "";
+        position: absolute;
+        z-index: 0;
+        width: calc(100% + 0.3em);
+        height: calc(100% + 0.3em);
+        top: -0.15em;
+        left: -0.15em;
+        border-radius: inherit;
+        background: linear-gradient(-135deg, rgba(5,5,5,0.5), transparent 20%, transparent 100%);
+        filter: blur(0.0125em);
+        opacity: 0.25;
+        mix-blend-mode: multiply;
+    }
+
+    .cv-download .button-outer {
+        position: relative;
+        z-index: 1;
+        border-radius: inherit;
+        transition: box-shadow 300ms ease;
+        will-change: box-shadow;
+        box-shadow: 0 0.05em 0.05em -0.01em rgba(5,5,5,1), 0 0.01em 0.01em -0.01em rgba(5,5,5,0.5), 0.15em 0.3em 0.1em -0.01em rgba(5,5,5,0.25);
+    }
+
+    .cv-download:hover .button-outer { box-shadow: 0 0 0 0 rgba(5,5,5,1), 0 0 0 0 rgba(5,5,5,0.5), 0 0 0 0 rgba(5,5,5,0.25); }
+
+    .cv-download .button-inner {
+        --inset: 0.035em;
+        position: relative;
+        z-index: 1;
+        border-radius: inherit;
+        padding: 0.7em 1.2em;
+        background-image: linear-gradient(135deg, rgba(230,230,230,1), rgba(180,180,180,1));
+        transition: box-shadow 300ms ease, clip-path 250ms ease, background-image 250ms ease, transform 250ms ease;
+        will-change: box-shadow, clip-path, background-image, transform;
+        overflow: clip;
+        clip-path: inset(0 0 0 0 round 999vw);
+        box-shadow: /* 1 */ 0 0 0 0 inset rgba(5,5,5,0.1), /* 2 */ -0.05em -0.05em 0.05em 0 inset rgba(5,5,5,0.25), /* 3 */ 0 0 0 0 inset rgba(5,5,5,0.1), /* 4 */ 0 0 0.05em 0.2em inset rgba(255,255,255,0.25), /* 5 */ 0.025em 0.05em 0.1em 0 inset rgba(255,255,255,1), /* 6 */ 0.12em 0.12em 0.12em inset rgba(255,255,255,0.25), /* 7 */ -0.075em -0.25em 0.25em 0.1em inset rgba(5,5,5,0.25);
+    }
+
+    .cv-download:hover .button-inner {
+        clip-path: inset(clamp(1px, 0.0625em, 2px) clamp(1px, 0.0625em, 2px) clamp(1px, 0.0625em, 2px) clamp(1px, 0.0625em, 2px) round 999vw);
+        box-shadow: /* 1 */ 0.1em 0.15em 0.05em 0 inset rgba(5,5,5,0.75), /* 2 */ -0.025em -0.03em 0.05em 0.025em inset rgba(5,5,5,0.5), /* 3 */ 0.25em 0.25em 0.2em 0 inset rgba(5,5,5,0.5), /* 4 */ 0 0 0.05em 0.5em inset rgba(255,255,255,0.15), /* 5 */ 0 0 0 0 inset rgba(255,255,255,1), /* 6 */ 0.12em 0.12em 0.12em inset rgba(255,255,255,0.25), /* 7 */ -0.075em -0.12em 0.2em 0.1em inset rgba(5,5,5,0.25);
+    }
+
+    .cv-download .button-inner span {
+        position: relative;
+        z-index: 4;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: -0.02em;
+        font-weight: 600;
+        color: rgba(0,0,0,0);
+        background-image: linear-gradient(135deg, rgba(25,25,25,1), rgba(75,75,75,1));
+        -webkit-background-clip: text;
+        background-clip: text;
+        transition: transform 250ms ease;
+        display: block;
+        will-change: transform;
+        text-shadow: rgba(0,0,0,0.1) 0 0 0.1em;
+        user-select: none;
+    }
+
+    .cv-download:hover .button-inner span { transform: scale(0.975); }
+    .cv-download:active .button-inner { transform: scale(0.975); }
+
+    /* Ensure anchor around button doesn't undo styling */
+    .btn a { text-decoration: none; }
+
