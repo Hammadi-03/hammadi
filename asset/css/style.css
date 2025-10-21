@@ -261,7 +261,7 @@ nav {
     border-bottom-right-radius: 35px;
     background: #f0f0cc;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(to bottom, #ffffff, #d7ca76);
+    background: linear-gradient(to bottom, #ffffff, #0645b1);
 
 }
 
@@ -661,7 +661,7 @@ footer {
     25%, 45% { content: "Design passionate"; }
     50%, 70% { content: "Programmer"; }
     75%, 95% { content: "Content Creator"; }
-    100% { content: "smart boy"; }
+    100% { content: "Designer"; }
 }
 
 @keyframes fadeIn {
