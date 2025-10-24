@@ -17,6 +17,7 @@
     --font-weight-bold: 700;
     --primary-color: #FFD700;
     --primary-color-dark: #e6c200;
+    --side-padding: 3%;
 
 }
 
@@ -112,7 +113,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 5%;
+    padding: 0 var(--side-padding);
 }
 
 .logo {
@@ -256,7 +257,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5% 5%;
+    padding: 5% var(--side-padding);
     border-bottom-left-radius:35px ;
     border-bottom-right-radius: 35px;
     background: #f0f0cc;
@@ -281,7 +282,7 @@ nav {
 
 .content {
     flex: 1;
-    padding: 0 5%;
+    padding: 0 var(--side-padding);
 }
 
 .content h1 {
@@ -401,6 +402,7 @@ nav {
     overflow: hidden;
     position: relative;
     font-family: 'Poppins', sans-serif;
+    padding: 0; /* full-bleed horizontally */
 }
 
 .scroller {
@@ -427,7 +429,7 @@ nav {
 /* New Section (Skills) */
 .new-section {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     padding: 90px 5%;
     background-color: #0b56a2;
     text-align: center;
@@ -465,7 +467,67 @@ nav {
     padding: 50px 0;
 }
 
-.card {
+.card1 {
+    background-color: #ffffff;
+    color: #060606;
+    width: 100%;
+    max-width: 350px;
+    min-height: 350px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card2 {
+    background-color: #ffffff;
+    color: #060606;
+    width: 100%;
+    max-width: 350px;
+    min-height: 350px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card3 {
+    background-color: #ffffff;
+    color: #060606;
+    width: 100%;
+    max-width: 350px;
+    min-height: 350px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card4 {
+    background-color: #ffffff;
+    color: #060606;
+    width: 100%;
+    max-width: 350px;
+    min-height: 350px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card5 {
     background-color: #ffffff;
     color: #060606;
     width: 100%;
@@ -481,26 +543,53 @@ nav {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card:hover {
+.card1:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 20px rgb(250, 106, 3);
 }
+.card2:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgb(47, 171, 253);
+}
+.card3:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 230, 5, 0.607);
+}
+.card4:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 170, 255, 0.881);
+}
+.card5:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(223, 36, 36, 0.733);
+}
+
 
 .card i {
     margin-bottom: 20px;
 }
 
-.card .fa-html5 {
+.card1 .fa-html5 {
     color: #e34c26;
 }
 
-.card .fa-css3-alt {
+.card2 .fa-css3-alt {
     color: #0a66c2;
 }
 
-.card .fa-js {
+.card3 .fa-js {
     color: #f4cc06;
 }
+
+.card4 .fa-react {
+    color: #0080ff;
+}
+
+.card5 .fa-laravel {
+    color: #ff0606;
+}
+
+
 
 .card h2 {
     font-size: 1.8rem;
@@ -631,8 +720,8 @@ nav {
 /* Footer */
 footer {
     width: 100%;
-    padding: 20px;
-    background-color: #121212;
+    padding: 25px;
+    background: linear-gradient(#0080ff,  #d0da77);
     border-top-left-radius: 32px;
     border-top-right-radius:32px ;
     color: #ffffff;
