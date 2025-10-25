@@ -103,7 +103,7 @@ nav {
     height: 10vh;
     min-height: 70px;
     background-color: var(--background-color);
-    border-bottom: 3px solid #000000;
+    border-bottom: 1.5px solid #000000;
     font-family: "Noto Kufi Arabic", sans-serif;
 }
 
@@ -277,7 +277,7 @@ nav {
     width: 100%;
     max-width: 450px;
     height: auto;
-    border-radius: 10px;
+    border-radius: 32px;
 }
 
 .content {
@@ -429,8 +429,9 @@ nav {
 /* New Section (Skills) */
 .new-section {
     width: 100%;
-    height: 100vh;
-    padding: 90px 5%;
+    /* avoid forcing viewport-height; use auto so content can flow and not cause overflow */
+    min-height: 60vh;
+    padding: 70px 5%;
     background-color: #0b56a2;
     text-align: center;
     border-radius: 100px;
@@ -625,29 +626,34 @@ nav {
     text-decoration: wavy underline;
 }
 
+
 .testimoni-container {
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
-    align-items: stretch;
-    gap: 2rem;
+    align-items: flex-start;
+    gap: 2.5rem;
     flex-wrap: wrap;
-    margin: auto;
+    padding: 1rem 0 2rem;
 }
 
 .testimoni-card {
     background: #f7f7f7;
-    width: 100%;
+    flex: 0 1 320px;
     max-width: 350px;
     min-height: 450px;
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 30px 20px;
-    transition: transform 0.3s ease;
+    padding: 80px 24px 30px; /* room for the avatar that overlaps */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    text-align: center;
 }
 
 .testimoni-card:hover {
@@ -659,7 +665,12 @@ nav {
     height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 20px;
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+    background: #fff;
 }
 
 .testimoni-card h3 {
@@ -700,6 +711,32 @@ nav {
     gap: 3rem;
     flex-wrap: wrap;
 }
+
+/* Ensure certificate images scale responsively and don't cause overflow */
+.certificate-item {
+    flex: 0 1 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.certificate-item img { max-width: 100%; height: auto; display:block; }
+
+/* Prevent images and other media from causing horizontal overflow */
+img { max-width: 100%; height: auto; display: block; }
+
+/* Keep main sections from creating unexpected horizontal overflow, but allow
+   the testimonial section to be visible (AOS uses transforms) */
+.main-container, .new-section, .certificate-section { overflow-x: hidden; }
+.testi-section { overflow: visible; position: relative; z-index: 2; padding-bottom: 3rem; }
+
+/* Ensure banners sit behind content and have clear spacing */
+.banner, .banner2 { position: relative; z-index: 0; }
+.banner2 { margin-top: 3.5rem; }
+
+/* Make testimonial cards layout more predictable */
+.testimoni-container { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+.testimoni-card { flex: 0 1 320px; max-width: 350px; }
 
 .certificate-item {
     flex: 1;
